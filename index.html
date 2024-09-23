@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Chat App</h1>
+            <div class="nav-buttons">
+                <button id="settings">Ajustes</button>
+                <button id="help">Ayuda</button>
+            </div>
+            <input type="text" placeholder="Buscar..." id="search" />
+        </nav>
+        <div class="chat">
+            <div class="recent-conversations">
+                <button id="toggleConversations">Conversaciones Recientes</button>
+                <ul id="conversationList">
+                    <li class="conversation unread"  data-contact="Juan" data-date="2024-09-21">
+                        <img src="profile1.jpg" alt="Perfil" class="profile-pic">
+                        Juan <span class="timestamp">12:30 PM</span>
+                    </li>
+                    <li class="conversation" data-contact="María" data-date="2024-09-20">
+                        <img src="profile2.jpg" alt="Perfil" class="profile-pic">
+                        María <span class="timestamp">Ayer</span>
+                    </li>
+                    <li class="conversation unread" data-contact="Pedro" data-date="2024-09-19">
+                        <img src="profile3.jpg" alt="Perfil" class="profile-pic">
+                        Pedro <span class="timestamp">09/18</span>
+                    </li>
+                    <li class="conversation" data-contact="Luisa" data-date="2024-09-18">
+                        <img src="profile4.jpg" alt="Perfil" class="profile-pic">
+                        Luisa <span class="timestamp">09/17</span>
+                    </li>
+                    <li class="conversation unread" data-contact="Carlos" data-date="2024-09-17">
+                        <img src="profile5.jpg" alt="Perfil" class="profile-pic">
+                        Carlos <span class="timestamp">09/16</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="current-conversation">
+                <h2>Conversación Actual</h2>
+                <div class="messages" id="messagesContainer"></div>
+                <div class="input-area">
+                    <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
+                    <button id="sendButton">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
